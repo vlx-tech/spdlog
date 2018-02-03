@@ -5,5 +5,8 @@ SubDir TOP external spdlog ;
 SOURCES += $(SUBDIR)/empty.cpp ;
 
 C.IncludeDirectories * : include ;
+
 Vlx.External fmt ;
+Depends external-spdlog : external-fmt ;
+
 C.Library external-spdlog : $(SOURCES) ;
